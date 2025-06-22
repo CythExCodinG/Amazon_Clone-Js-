@@ -1,18 +1,19 @@
-import { cart } from "../data/cart.js"
+import { cart } from "../data/cart.js";
 import { products } from "../data/products.js"
 import { formatCurrency } from "./utils/money.js";
 import { removeFromCart } from "../data/cart.js";
 
+let finalHtml = ""
 let html = '';
 let productName = ""
 let productImage = ""
 let quantity = ""
-let finalHtml = ""
 let price = ""
 let id = "";
 console.log(cart);
 cart.forEach((cartItem) => {
   products.forEach((product) => {
+
     if (cartItem.productId == product.id) {
       productName = product.name;
       productImage = product.image;
