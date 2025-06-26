@@ -20,8 +20,10 @@ export function renderPaymentSummary() {
     console.log(totalPriceCents)
     console.log(shippingPriceCents)
     const totalBeforeTax = formatCurrency(shippingPriceCents + totalPriceCents);
-    const taxCents = (totalBeforeTax * 0.1).toFixed(2);
-    const totalCents = totalBeforeTax + taxCents;
+    const taxCents = (totalBeforeTax * 0.1);
+    const totalCents = Number(totalBeforeTax) + taxCents;
+
+    console.log(totalBeforeTax, taxCents)
 
     const paymentSummaryHTML =
       `
@@ -46,12 +48,12 @@ export function renderPaymentSummary() {
 
     <div class="payment-summary-row">
       <div>Estimated tax (10%):</div>
-      <div class="payment-summary-money">${taxCents}</div>
+      <div class="payment-summary-money">${Number(taxCents).toFixed(2)}</div>
     </div>
 
     <div class="payment-summary-row total-row">
       <div>Order total:</div>
-      <div class="payment-summary-money">${totalCents}</div>
+      <div class="payment-summary-money">${Number(totalCents).toFixed(2)}</div>
     </div>
 
     <button class="place-order-button button-primary">
