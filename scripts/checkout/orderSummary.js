@@ -4,7 +4,7 @@ import { formatCurrency } from "../utils/money.js";
 import { removeFromCart, updateDeliveryOption } from "../../data/cart.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 import { deliveryOptions } from "../../data/deliveryOptions.js";
-
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 export function renderOrderSummary() {
   let finalHtml = ""
@@ -133,7 +133,9 @@ export function renderOrderSummary() {
 
         const container = document.querySelector(`.js-cart-item-container-${deleteId}`)
         console.log(container)
-        container.remove()
+        container.remove();
+        renderPaymentSummary()
+        console.log("delete called")
       })
     })
 
@@ -153,6 +155,7 @@ export function renderOrderSummary() {
         console.log(deliveryOptionId)
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
+        renderPaymentSummary()
       })
     })
 }
