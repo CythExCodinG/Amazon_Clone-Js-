@@ -60,7 +60,7 @@ export function renderPaymentSummary() {
       Place your order
     </button>
     `
-    console.log(paymentSummaryHTML);
+
     document.querySelector('.payment-summary').innerHTML = paymentSummaryHTML;
   }
 
