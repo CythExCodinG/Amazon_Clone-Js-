@@ -1,18 +1,26 @@
 
-let cartData = localStorage.getItem('cart');
+export let cart;
 
-export let cart = Array.isArray(JSON.parse(cartData)) ? JSON.parse(cartData) : [
-  {
-    productId: "54e0eccd-8f36-462b-b68a-8182611d9add",
-    quantity: 2,
-    deliveryOptionId: `1`
-  },
-  {
-    productId: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-    quantity: 1,
-    deliveryOptionId: `2`
+loadFromStorage();
+
+export function loadFromStorage() {
+  cart = JSON.parse(localStorage.getItem('cart'));
+
+  if (!cart) {
+    cart = [
+      {
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+        quantity: 2,
+        deliveryOptionId: '1'
+      },
+      {
+        productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
+        quantity: 2,
+        deliveryOptionId: '1'
+      }
+    ]
   }
-];
+}
 
 
 function saveToStorage() {
