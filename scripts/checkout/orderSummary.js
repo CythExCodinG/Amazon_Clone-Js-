@@ -14,7 +14,6 @@ export function renderOrderSummary() {
   let quantity = ""
   let price = ""
   let id = "";
-  console.log(cart);
   cart.forEach((cartItem) => {
     products.forEach((product) => {
 
@@ -100,8 +99,6 @@ export function renderOrderSummary() {
       )
 
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
-      console.log(deliveryOption.id);
-      console.log(cartItem.deliveryOptionId);
       html += `
       <div class="delivery-option js-delivery-option"
       data-product-id="${id}"
@@ -132,15 +129,12 @@ export function renderOrderSummary() {
         removeFromCart(deleteId);
 
         const container = document.querySelector(`.js-cart-item-container-${deleteId}`)
-        console.log(container)
         container.remove();
         renderPaymentSummary()
-        console.log("delete called")
       })
     })
 
   let TotalItemsElements = document.querySelector('.return-to-home-link');
-  console.log(TotalItemsElements.innerHTML)
   if (cart.length > 1) {
     TotalItemsElements.innerHTML = cart.length + ' items';
   }
@@ -152,7 +146,6 @@ export function renderOrderSummary() {
     .forEach((option) => {
       option.addEventListener('click', () => {
         const { productId, deliveryOptionId } = option.dataset;
-        console.log(deliveryOptionId)
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
         renderPaymentSummary()

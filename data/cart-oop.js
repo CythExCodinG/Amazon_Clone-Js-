@@ -65,7 +65,6 @@ function Cart(localStorageKey) {
           matchingItem = item;
         }
       });
-      console.log("this is id", deliveryOption);
       matchingItem.deliveryOptionId = deliveryOption;
       this.saveToStorage();
     }
@@ -78,5 +77,3 @@ const cart = Cart('cart-oop');
 const businessCart = Cart('cart-business');
 cart.loadFromStorage();
 businessCart.loadFromStorage();
-console.log(cart);
-console.log(businessCart);

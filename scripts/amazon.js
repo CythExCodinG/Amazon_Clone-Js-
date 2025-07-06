@@ -86,7 +86,6 @@ function renderProductsGrid() {
     cart.forEach((item) => {
       itemQuantity += item.quantity;
     })
-    console.log(itemQuantity)
     cartQuantityElement.innerHTML = itemQuantity;
   }
   const productElement = document.querySelector('.products-grid');
