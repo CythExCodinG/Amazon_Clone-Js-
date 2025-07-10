@@ -6,19 +6,33 @@ import '../data/cart-oop.js';
 
 async function loadPage() {
 
-  await loadProductsFetch();
+  try {
+    await loadProductsFetch();
 
-  await new Promise((resolve) => {
-    loadCart(() => {
-      resolve();
+    await new Promise((resolve, reject) => {
+      loadCart(() => {
+        // reject('error3')
+        resolve();
+      })
     })
-  })
+  } catch (error) {
+    console.log("Bhai gya tu")
+  }
+  // await loadProductsFetch();
+
+  // await new Promise((resolve) => {
+  //   loadCart(() => {
+  //     resolve();
+  //   })
+  // })
 
   renderOrderSummary();
   renderPaymentSummary();
 }
 
 loadPage()
+
+
 /*
 Promise.all([
   loadProductsFetch(),

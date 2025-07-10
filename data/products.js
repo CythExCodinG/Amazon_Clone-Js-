@@ -82,13 +82,12 @@ export function loadProductsFetch() {
       });
 
       console.log('load Products')
+    }).catch((error) => {
+      console.log('Got some error man');
     })
   return promise;
 }
 
-// loadProductsFetch().then(() => {
-//   console.log("next step")
-// })
 
 export let products = [];
 
@@ -104,11 +103,15 @@ export function loadProducts(fun) {
 
     fun();
   })
+
+  xhr.addEventListener('error', (error) => {
+    console.log('Unexpected error occurred for fetch')
+  });
+
   xhr.open('GET', 'https://supersimplebackend.dev/products')
   xhr.send();
 }
 
-loadProducts()
 
 
 
