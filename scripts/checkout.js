@@ -18,13 +18,6 @@ async function loadPage() {
   } catch (error) {
     console.log("Bhai gya tu")
   }
-  // await loadProductsFetch();
-
-  // await new Promise((resolve) => {
-  //   loadCart(() => {
-  //     resolve();
-  //   })
-  // })
 
   renderOrderSummary();
   renderPaymentSummary();
