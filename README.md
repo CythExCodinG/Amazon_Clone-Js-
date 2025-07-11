@@ -69,10 +69,6 @@ It <strong>won’t work offline</strong> unless all data is hosted locally and s
   <li>Clone the repository:
     <pre><code>git clone https://github.com/your-username/Amazon_Clone-Js-.git</code></pre>
   </li>
-  <li>Open the folder and start a <strong>local server</strong> (recommended for fetch to work):
-    <pre><code>python -m http.server</code></pre>
-  </li>
-  <li>Open the link (usually <code>http://localhost:8000</code>) in your browser.</li>
 </ol>
 <p><strong>❌ Do not</strong> open the HTML file directly (like <code>index.html</code>) via double-click — <strong>fetch may not work</strong> due to browser restrictions.</p>
 
