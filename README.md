@@ -1,20 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amazon Clone - README</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 960px; margin: auto; line-height: 1.6; }
-    h1, h2, h3 { color: #333; }
-    img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; margin-top: 10px; }
-    code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
-    pre { background: #f4f4f4; padding: 10px; border-radius: 4px; overflow-x: auto; }
-    blockquote { background: #f9f9f9; padding: 10px 20px; border-left: 5px solid #ccc; margin: 1em 0; }
-    hr { margin: 30px 0; }
-  </style>
-</head>
-<body>
 
 <h1>🛒 Amazon Clone using HTML, CSS & JavaScript</h1>
 <p>A basic clone of the Amazon shopping website, built using <strong>HTML, CSS, and JavaScript</strong>. This project was created as part of my <strong>JavaScript learning journey</strong> using an <strong>implementation-based learning</strong> approach — I learn by building.</p>
@@ -98,5 +81,3 @@ It <strong>won’t work offline</strong> unless all data is hosted locally and s
 <h2>🙏 Acknowledgements</h2>
 <p>This clone is made solely for <strong>educational purposes</strong> and is inspired by Amazon's user interface. Images/data used are for demo and learning only.</p>
 
-</body>
-</html>
